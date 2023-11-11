@@ -137,7 +137,7 @@ This tutorial outlines the lifecycle of a ticket from intake to resolution withi
 
 ****
 
-**Conclusion:**  
+<h3>Conclusion:</h3>  
 
  - **Congratulations!** You've successfully navigated the intricate stages of osTicket, from its installation and configuration to the practical handling of tickets in a simulated environment. This tutorial has equipped you with the essential skills to manage the complete lifecycle of a ticket, ensuring efficient issue resolution and user communication.
 
