@@ -3,137 +3,143 @@
 </p>
 
 <h1 align="center">osTicket - Ticket Lifecycle Examples</h1>
+
 This tutorial outlines the lifecycle of a ticket from intake to resolution within the open-source help desk ticketing system osTicket. This tutorial assumes you have completed both the <a href= "https://github.com/cyber-singh/osticket-prereqs"> installation </a> and <a href = "https://github.com/cyber-singh/post-install-config">configuration</a> of osTicket
 
 </br>
 
+<p>
 <h2>Environments and Technologies Used</h2>
-<ul>
-  <li>Microsoft Azure (Virtual Machines/Compute)</li>
-  <li>Remote Desktop</li>
-  <li>Internet Information Services (IIS)</li>
-  <li>osTicket</li>
-</ul>
+
+ - **Microsoft Azure (Virtual Machines/Compute)**
+ - **Remote Desktop**
+ - **Internet Information Services (IIS)**
+ - **osTicket**
+  
+   </p>
 
 </br>
 
-<h2>Operating Systems Used </h2>
-<ul>
-  <li>Windows 10</li>
-</ul>
+<h2>Operating System Used</h2>
+
+ - **Windows 10**
 
 </br>
 
-<h2>Ticket Lifecycle Stages</h2>
-<ol>
-  <li>Intake</li>
-  <li>Assignment & Communication</li>
-  <li>Working the Issue</li>
-  <li>Resolution</li>
-</ol>
+<p>
+  <h2>Ticket Lifecycle Stages</h2>
+
+**1. Intake**  
+**2. Assignment & Communication**   
+**3. Working the Issue**   
+**4. Resolution**  
+    </p>
 
 </br>
 
+<p>
 <h2>Lifecycle Stages</h2>
-
 
 <h3>Intake</h3>
 
-<p>
-  <ul>
-    <li>From the <b>End User's</b> side (Karen Karen), they create a ticket through osTicket's <a href = "http://localhost/osTicket/ ">local host site</a> and fill their information, select a Help Topic</li>
-    <ul>
-      
-<img src="https://github.com/cyber-singh/ticket-lifecycle/assets/149118027/e34eb6f7-1bc9-47ad-af5a-577f1a5296f4"/>
-     
-    </ul>
-    
-    <li>The End User then writes ticket through the <b>Issue Summary</b> and adds a subject and details of the ticket much similar to writing an email</li>
-    <ul>
-      <li>In this example, Karen creates the ticket under the Help Topic of a Business Critcal Outage (made from our configuration of osTicket) explaining the mobile banking application is suffering a 404 error</li>
-      
-<img src="https://github.com/cyber-singh/ticket-lifecycle/assets/149118027/ca9e6496-5f95-4708-87db-7de83e851b1a"/>
-    
-    </ul>
-    <li>Karen then creates the ticket and is sent to <b>Agent</b> Jane Doe (which we've set as Supreme Admin is able to see all incoming tickets in the configuration tutorial) who views it from the <a href = "http://localhost/osTicket/scp/login.php">local help desk login</a></li>
-    <ul>
-      <li><b>Note</b>: Priorities have not been set for other incoming tickets such as ticket #951342 where end user Ken is requesting an upgrade to Adobe Reader. SLA plans need to be set for these tickets hence why they are all under the priority state of "Normal"</li>
-      
-<img src="https://github.com/cyber-singh/ticket-lifecycle/assets/149118027/a04d0885-6d48-4f9f-a600-4a23eef184b7"/>
-    
-    </ul>
-  </ul>
-</p>
+ - **From the End User's Perspective (Karen Karen):** Karen initiates the ticket creation process by accessing **osTicket's local host site**. She provides her details and selects a relevant **Help Topic**.  
 
-<h3>Assignment & Communication</h3>
+   <img src="https://github.com/cyber-singh/ticket-lifecycle/assets/149118027/e34eb6f7-1bc9-47ad-af5a-577f1a5296f4"/>
+   </p>
+
+</br>
 
 <p>
-  <ul>
-    <li>The Business Critical Outage ticket by Karen numbered 282733 is assigned to the Agent Jane Doe. From Jane's perspective, this is how the ticket first looks.</li>
-    <ul>
-      <li>The Agent is able to message the End User through the <b>Ticket Thread</b> located in the bottom of the ticket page</li>
-     
-<img src="https://github.com/cyber-singh/ticket-lifecycle/assets/149118027/7e14f2ab-cab9-4d4a-84c2-960e0410030e"/>
-    
-    </ul>
-    <li>By going to the link next to <b>Priority</b>, you are able to set the priority of the ticket to Low, Normal, High, or Emergency</li>
-    <ul>
-      
-<img src="https://github.com/cyber-singh/ticket-lifecycle/assets/149118027/1c8fe483-5ff2-4205-84f9-fb9b96f221a9"/>
-   
-    </ul>
-    <li>By going to the greyed out link --Unassigned-- next to <b>Assigned to</b>, you can assign the ticket to a Team or Agents. Note if we were to assign it to an Agent outside of Agent Jane's Department, it will not appear in their feed.</li>
-    <ul>
-    
-<img src="https://github.com/cyber-singh/ticket-lifecycle/assets/149118027/565c86b4-31cc-4e88-9e83-aa4e7d222bc2"/>
   
-    </ul>
-    <li>By going to the link next to <b>SLA Plan</b> to set the SLA Plan from Default SLA to one our SLA Plans we have created in configuration. For this Business Critical Outage ticket, it'll be set to SEV-A</li>
-    <ul>
-    
-<img src="https://github.com/cyber-singh/ticket-lifecycle/assets/149118027/22b50dd2-777b-4917-b252-747807a132cd"/>
-    
-    </ul>
-    <li>By going to the link next to <b>Department</b> to set the Department. For this Business Critical Outage ticket, it'll be set from Support to System Administrators</li>
-    <ul>
-     
-<img src="https://github.com/cyber-singh/ticket-lifecycle/assets/149118027/5f2608bd-9b16-4b31-b0bd-9d340cb2c1f2"/>
-    
-    </ul>
-    <li>The Ticket Thread is updated when we make the changes to ticket</li>
-    <ul>
-     
-<img src="https://github.com/cyber-singh/ticket-lifecycle/assets/149118027/4e5aca49-6acb-4813-8455-593b3744ba70"/>
-    
-    </ul>
-    <li>The Agent can message the End User through the Ticket Thread to update the User on the ticket as well as set the status of the ticket (which is left as <b>Open</b> since we need to work it out)</li>
-    <ul>
-      
-<img src="https://github.com/cyber-singh/ticket-lifecycle/assets/149118027/17b4e37e-3ebd-430b-91c7-1fd88e321074"/>
-   
-    </ul>
-  </ul>
-</p>
+ - **End User's Action:** Subsequently, the **End User (Karen Karen)** provides detailed information about the issue by composing a ticket through the **Issue Summary**. This includes specifying a subject and furnishing details related to the ticket, resembling the process of composing an email.
 
-<br />
+ - **Ticket Creation Example:** In this instance, **Karen** initiates the ticket creation process under the Help Topic category of a **Business Critical Outage**, a configuration we set up in **osTicket**. **Karen** articulates the issue, elucidating that the **Mobile Banking Application** is encountering a **404 error**.
 
-<h3>Working the Issue and Resolution</h3>
+   <img src="https://github.com/cyber-singh/ticket-lifecycle/assets/149118027/ca9e6496-5f95-4708-87db-7de83e851b1a"/>
+   </p>
+
+</br>
 
 <p>
-  <ul>
-    <li>Following from our Assignment of Departments and Communication with the End User, the issue in our hypothetical Critical Banking Outage ticket has been resolved thanks to System Engineering. The Agent should now communicate the issue with the End User using the Ticket Thread and set the status of the ticket from Open to <b>Resolved</b>. Upon posting the Reply, the ticket is <b>Closed</b>.</li>
-    <ul>
-      
-<img src="https://github.com/cyber-singh/ticket-lifecycle/assets/149118027/f9ea5d54-2498-49b9-943d-b044c2ecbd02"/>
-   
-    </ul>
-    <li>Closed tickets can be found under the Closed section in our Tickets tab, where information and status of the tickets are archived. It is good practice for Agents to study Closed tickets to improve their experience in working with them</li>
-    <ul>
-    
-<img src="https://github.com/cyber-singh/ticket-lifecycle/assets/149118027/0bebfb91-4aad-469e-b3fe-0092ac2ca9b6"/>
   
-    </ul>
-  </ul>
+ - **Ticket Assignment:** After **Karen** creates the ticket, it is directed to Agent **Jane Doe**, designated as the **Supreme Admin** with the ability to monitor all incoming tickets, as configured in the tutorial. **Jane Doe** reviews the ticket through the local Help Desk Login Interface.
+
+ - **Ticket Priorities:** It's important to note that **Priorities** haven't been assigned for other incoming tickets, like **Ticket #951342**, where end user **Ken** is seeking an upgrade to Adobe Reader. The tutorial suggests the necessity to set **SLA plans** for these tickets, hence why they currently fall under the **"Normal"** priority state.
+ 
+    <img src="https://github.com/cyber-singh/ticket-lifecycle/assets/149118027/a04d0885-6d48-4f9f-a600-4a23eef184b7"/>
+    </p>
+    
+****
+
+<p>  
+<h3>Assignment & Communication</h3>  
+<br>  
+
+- **Ticket Assignment:** The **Business Critical Outage** ticket, **Numbered 282733**, created by **Karen**, is now assigned to Agent **Jane Doe**. From Jane's perspective, the picture illustrates how the ticket appears when initially viewed.
+
+- **Communication via Ticket Thread:** Within the ticket page, Agent Jane Doe can communicate with the End User, Karen, through the **Ticket Thread** located at the bottom of the page.
+ 
+    <img src="https://github.com/cyber-singh/ticket-lifecycle/assets/149118027/7e14f2ab-cab9-4d4a-84c2-960e0410030e"/>
+    </p>
+
+</br>
+
+<p>
+  
+- **Setting Ticket Priority:** To adjust the priority of the ticket, click on the link next to **"Priority"**. You can choose from options such as **Low**, **Normal**, **High**, or **Emergency**.
+
+  <img src="https://github.com/cyber-singh/ticket-lifecycle/assets/149118027/1c8fe483-5ff2-4205-84f9-fb9b96f221a9"/>
+
+<br>
+  
+- **Assigning the Ticket:** Click on the greyed-out link --**Unassigned**-- next to **"Assigned To"**. Here, you can assign the ticket to a **Team** or specific **Agents**. Keep in mind that if assigned to an Agent outside of Agent **Jane's Department**, it won't appear in their feed.
+
+  <img src="https://github.com/cyber-singh/ticket-lifecycle/assets/149118027/565c86b4-31cc-4e88-9e83-aa4e7d222bc2"/>
+
+</br>
+
+- **Setting SLA Plan:** Navigate to the link next to **"SLA Plan"**. Change it from the **Default SLA** to one of the SLA Plans configured earlier. For the **Business Critical Outage** ticket, set it to **SEV-A**.
+
+  <img src="https://github.com/cyber-singh/ticket-lifecycle/assets/149118027/22b50dd2-777b-4917-b252-747807a132cd"/>
+
+</br>
+
+- **Adjusting Department:** Click on the link next to **"Department"** to modify it. Change it from **Support** to **System Administrators** for this Business Critical Outage ticket.
+
+  <img src="https://github.com/cyber-singh/ticket-lifecycle/assets/149118027/5f2608bd-9b16-4b31-b0bd-9d340cb2c1f2"/>
+
+</br>
+
+- **Updating Ticket Thread:** The Ticket Thread is automatically updated when changes are made to the ticket.
+
+  <img src="https://github.com/cyber-singh/ticket-lifecycle/assets/149118027/4e5aca49-6acb-4813-8455-593b3744ba70"/>
+
+</br>
+
+- **Agent Communication:** The **Agent** can use the **Ticket Thread** to send messages to the **End User**, providing updates on the ticket. Additionally, the Agent can adjust the ticket **Status** as needed, with the current status being left as **"Open"** while the issue is being addressed.
+
+  <img src="https://github.com/cyber-singh/ticket-lifecycle/assets/149118027/17b4e37e-3ebd-430b-91c7-1fd88e321074"/>
+  </p>
+
+****  
+
+<p>
+<h3>Working the Issue and Resolution</h3>  
+
+- **Issue Resolution:** After addressing the problem through departmental assignment and communication with the End User, the critical banking outage in our **Hypothetical scenario** has been **successfully resolved**, courtesy of the **System Engineering team**. The **Agent** must now inform the **End User** about the **Resolution** using the **Ticket Thread**. Furthermore, the Agent should update the ticket **status** from **"Open"** to **"Resolved"**. Once the reply is posted, the ticket is marked as **"Closed"**.
+
+  <img src="https://github.com/cyber-singh/ticket-lifecycle/assets/149118027/f9ea5d54-2498-49b9-943d-b044c2ecbd02"/>
+
+</br>
+
+- **Ticket Closure and Archiving:** Closed tickets are archived and can be accessed under the **"Closed"** section in the **Tickets** tab. This serves as a valuable resource for **Agents** to enhance their expertise by studying the information and status of past tickets. Analyzing closed tickets contributes to continuous improvement in managing and resolving similar issues in the future.
 </p>
 
-<br />
+****
+
+**Conclusion:**  
+
+ - **Congratulations!** You've successfully navigated the intricate stages of osTicket, from its installation and configuration to the practical handling of tickets in a simulated environment. This tutorial has equipped you with the essential skills to manage the complete lifecycle of a ticket, ensuring efficient issue resolution and user communication.
+
+ - Thank you for embarking on this osTicket journey with **[ME](https://www.linkedin.com/in/cybersingh)**. ***Happy ticketing!***
+
